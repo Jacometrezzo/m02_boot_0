@@ -5,4 +5,13 @@ def sumaTodos(limitTo):
         
     return resultado
 
+def sumaTodosLosCuadrados(limitTo):
+    resultado = 0
+    for i in range(limitTo):
+        resultado +=i*i
+        
+    return resultado
+
 print(sumaTodos(100))
+print(sumaTodosLosCuadrados(3))
+
