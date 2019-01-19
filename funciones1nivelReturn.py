@@ -31,3 +31,22 @@ def media(*l):
        suma += valor
        
     return suma / len(l)
+'''
+print(maxi(1, 3, -1, 15, 9))
+print(mini(1, 3, -1, 15, 9))
+print(media(1, 3, -1, 15, 9))
+'''
+
+funciones = {
+    'max' : maxi,
+    'min' : mini,
+    'med' : media
+    }
+
+
+def returnF(nombre):
+    nombre = nombre.lower()
+    if nombre in funciones.keys():
+        return funciones[nombre]
+    
+    return None
