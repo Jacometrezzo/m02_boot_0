@@ -28,6 +28,6 @@ print(list(listaPares1))
 print(sumatorio)
 print(suma100)
 
-print(sumatorio,'\n', suma100)
+print(sumatorio ,'\n', suma100)
 
  
