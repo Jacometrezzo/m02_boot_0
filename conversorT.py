@@ -12,7 +12,7 @@ class Termometro():
             return 'unidad incorrecta'
         
     def __str__(self):
-        return '{}º {}'.format(self.temperatura, self.unidadM)
+        return '{}º {}'.format(self.__temperatura, self.__unidadM)
         
     def unidadMedida(self, uniM = None):
         if uniM == None:
@@ -21,16 +21,19 @@ class Termometro():
             if uniM == 'F' or uniM == 'C':
                 self.__unidadM = uniM
                 
-    def Temp(self, temperatura = None):
+    def temp(self, temperatura = None):
         if temperatura == None:
             return self.__temperatura
         else:
-            self.__temperatura = temperatura
+             self.__temperatura = temperatura
             
     def mide(self, uniM = None):
-        if uniM == None or uniM == self.unidadM:
+        if uniM == None or uniM == self.__unidadM:
             return self.__str__()
         else:
-            return self.__conversor(self.temperatura, uniM)
+            if uniM == 'F' or uniM == 'C':
+                return self.__conversor(self.__temperatura, self.__unidadM)
+            else:
+                return self.__str__()
             
     
